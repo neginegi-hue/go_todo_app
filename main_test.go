@@ -12,7 +12,7 @@ import (
 )
 
 func TestRun(t *testing.T) {
-	l, err := net.Listen("tcp", "localhost:0")
+	l, err := net.Listen("tcp", ":0")
 	if err != nil {
 		t.Fatalf("failed to listen port %v", err)
 	}

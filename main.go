@@ -17,7 +17,7 @@ func main() {
 		os.Exit(1)
 	}
 	p := os.Args[1]
-	l, err := net.Listen("tcp", ":"+p)
+	l, err := net.Listen("tcp", "localhost:"+p)
 	if err != nil {
 		log.Fatalf("failed to listen port %s: %v", p, err)
 	}
