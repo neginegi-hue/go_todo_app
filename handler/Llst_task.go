@@ -19,10 +19,10 @@ type task struct {
 func (lt *ListTask) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 	tasks, err := lt.Service.ListTasks(ctx)
-	if err != nil{
-		RespondJSON(ctx,w, &ErrRespponse{
+	if err != nil {
+		RespondJSON(ctx, w, &ErrRespponse{
 			Message: err.Error(),
-		},http.StatusInternalServerError)
+		}, http.StatusInternalServerError)
 		return
 	}
 	rsp := []task{}

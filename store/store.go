@@ -1,7 +1,6 @@
 package store
 
 import (
-
 	"errors"
 
 	"github.com/neginegi-hue/go_todo_app/entity"
@@ -40,6 +39,3 @@ func (ts *TaskStore) All() entity.Tasks {
 	}
 	return tasks
 }
-
-
-

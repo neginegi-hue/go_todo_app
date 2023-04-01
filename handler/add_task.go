@@ -9,7 +9,7 @@ import (
 )
 
 type AddTask struct {
-	Service AddTaskService
+	Service   AddTaskService
 	Validator *validator.Validate
 }
 
@@ -33,7 +33,7 @@ func (at *AddTask) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		}, http.StatusBadRequest)
 		return
 	}
-	t,err := at.Service.AddTask(ctx,b.Title)
+	t, err := at.Service.AddTask(ctx, b.Title)
 	if err != nil {
 		RespondJSON(ctx, w, &ErrRespponse{
 			Message: err.Error(),

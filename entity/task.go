@@ -22,4 +22,3 @@ type Task struct {
 }
 
 type Tasks []*Task
-
